@@ -1,0 +1,10 @@
+/* ---- pywal themed rofi config ---- */
+/* Main Config (long) - emoji         */
+
+@import "~/.config/rofi/config-long.rasi"
+
+/* ---- Entry ---- */
+entry {
+  width: 45%;
+  placeholder: "💫 Search Emoji's  **note** 👀 Click or Return to choose | Ctrl V to Paste";
+}

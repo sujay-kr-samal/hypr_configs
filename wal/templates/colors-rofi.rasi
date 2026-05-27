@@ -1,0 +1,30 @@
+/* ---- pywal template - colors-rofi ---- */
+/* Place at: ~/.config/wal/templates/colors-rofi.rasi */
+
+* {{
+active-background:              {color4};
+active-foreground:              {foreground};
+normal-background:              {background};
+normal-foreground:              {foreground};
+urgent-background:              {color1};
+urgent-foreground:              {foreground};
+
+alternate-active-background:    {color6};
+alternate-active-foreground:    {foreground};
+alternate-normal-background:    {background};
+alternate-normal-foreground:    {foreground};
+alternate-urgent-background:    {background};
+alternate-urgent-foreground:    {foreground};
+
+selected-active-background:     {color4};
+selected-active-foreground:     {foreground};
+selected-normal-background:     {color2};
+selected-normal-foreground:     {foreground};
+selected-urgent-background:     {color1};
+selected-urgent-foreground:     {foreground};
+
+background-color:               {background};
+background:                     {background}b3;
+foreground:                     {color2};
+border-color:                   {color4};
+}}

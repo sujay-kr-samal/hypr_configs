@@ -1,0 +1,147 @@
+{
+  // ╔══════════════════════════════════════╗
+  // ║   Waybar Config — Minimal & Clean    ║
+  // ║   For Hyprland + swaync              ║
+  // ╚══════════════════════════════════════╝
+
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "spacing": 0,
+  "margin-top": 8,
+  "margin-left": 12,
+  "margin-right": 12,
+  "exclusive": true,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "pulseaudio",
+    "battery",
+    "tray",
+    "custom/notification"
+  ],
+
+  // ── Workspaces ──────────────────────────
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "active": "",
+      "default": ""
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5]
+    }
+  },
+
+  // ── Clock ────────────────────────────────
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%a, %d %b %Y  %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#cdd6f4'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'>{}</span>",
+        "weekdays": "<span color='#6c7086'><b>{}</b></span>",
+        "today": "<span color='#89b4fa'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+
+  // ── CPU ─────────────────────────────────
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 2,
+    "tooltip": false
+  },
+
+  // ── Memory ──────────────────────────────
+  "memory": {
+    "format": " {used:0.1f}G",
+    "interval": 5,
+    "tooltip-format": "{used:0.1f}G / {total:0.1f}G used"
+  },
+
+  // ── Network ─────────────────────────────
+  "network": {
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": " connected",
+    "format-disconnected": "󰌙 offline",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)\n {bandwidthDownBits}  {bandwidthUpBits}",
+    "tooltip-format-ethernet": "{ifname}\n {bandwidthDownBits}  {bandwidthUpBits}",
+    "interval": 5,
+    "on-click": "nm-connection-editor"
+  },
+
+  // ── Audio (PulseAudio / PipeWire) ────────
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁 muted",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "scroll-step": 2,
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+
+  // ── Battery ─────────────────────────────
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "tooltip-format": "{timeTo}\nPower draw: {power}W"
+  },
+
+  // ── System Tray ──────────────────────────
+  "tray": {
+    "icon-size": 14,
+    "spacing": 8
+  },
+
+  // ── Swaync Notification Bell ─────────────
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂚",
+      "dnd-notification": "󱅫",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "󱅫",
+      "inhibited-none": "󰂚",
+      "dnd-inhibited-notification": "󱅫",
+      "dnd-inhibited-none": "󰂛"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
+}
