@@ -181,7 +181,29 @@ reload_kitty() {
         echo ">> Kitty not running, skipping reload"
     fi
 }
+# =====================================================
+# GENERATE ROFI COLORS (from pywal)
+# =====================================================
 
+generate_rofi_colors() {
+    (
+    set +u
+    source "$HOME/.cache/wal/colors.sh"
+    mkdir -p "$HOME/.config/rofi/wallust"
+    cat > "$HOME/.config/rofi/wallust/colors-rofi.rasi" << EOF
+* {
+    wal-background:     ${color0};
+    wal-background-alt: ${color8};
+    wal-foreground:     ${color7};
+    wal-selected:       ${color4};
+    wal-active:         ${color2};
+    wal-urgent:         ${color1};
+    wal-text-selected:  ${color0};
+    wal-text-color:     ${color7};
+}
+EOF
+    )
+}
 # =========================================================
 # APPLY WALLPAPER
 # =========================================================
@@ -230,6 +252,12 @@ apply_wallpaper() {
     # =====================================================
 
     generate_waybar_colors
+
+    # =====================================================
+    # GENERATE ROFI COLORS
+    # =====================================================
+
+    generate_rofi_colors
 
     # =====================================================
     # SAVE CURRENT WALLPAPER
