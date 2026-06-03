@@ -1,0 +1,82 @@
+window {
+  background: transparent;
+  background-color: transparent;
+}
+.background {
+  background: transparent;
+  background-color: transparent;
+}
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  color: #b1b9b1;
+}
+.dashboard {
+  background: transparent;
+  padding: 12px;
+}
+.date {
+  font-size: 18px;
+  font-weight: bold;
+  color: #b1b9b1;
+  margin-bottom: 6px;
+  padding-left: 4px;
+}
+.card {
+  background: rgba(14,15,18, 0.82);
+  border-radius: 14px;
+  padding: 12px;
+  border: 1px solid rgba(123,129,123, 0.3);
+}
+.card-title {
+  font-size: 12px;
+  color: #546657;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.card-val {
+  font-size: 14px;
+  color: #b1b9b1;
+}
+.card-sub {
+  font-size: 11px;
+  color: #7b817b;
+}
+.stat-card {
+  min-width: 60px;
+}
+.stat-icon {
+  font-size: 20px;
+  color: #546657;
+}
+.stat-val {
+  font-size: 13px;
+  color: #b1b9b1;
+}
+.music-title {
+  color: #3F6051;
+}
+.row {
+  margin-bottom: 4px;
+}
+.clock-box {
+  background: transparent;
+  padding: 10px;
+}
+.clock-time {
+  font-size: 72px;
+  font-weight: bold;
+  color: #b1b9b1;
+  letter-spacing: -2px;
+}
+.clock-day {
+  font-size: 28px;
+  font-style: italic;
+  color: #b1b9b1;
+  margin-top: -8px;
+}
+.clock-date {
+  font-size: 14px;
+  color: #7b817b;
+  letter-spacing: 2px;
+}

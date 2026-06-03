@@ -1,0 +1,10 @@
+* {
+    wal-background:     #0e0f12;
+    wal-background-alt: #7b817b;
+    wal-foreground:     #b1b9b1;
+    wal-selected:       #546657;
+    wal-active:         #3F6051;
+    wal-urgent:         #3B4B43;
+    wal-text-selected:  #0e0f12;
+    wal-text-color:     #b1b9b1;
+}

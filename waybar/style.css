@@ -1,0 +1,273 @@
+@import "colors.css";
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    border: none;
+    border-radius: 12px;
+
+    font-family: "FiraCode Nerd Font";
+    font-size: 13px;
+    font-weight: 500;
+
+    min-height: 0;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+/* =========================================================
+   WAYBAR WINDOW
+========================================================= */
+
+window#waybar {
+    background: alpha(@background, 0.72);
+
+    color: @foreground;
+
+    border-radius: 16px;
+}
+
+/* =========================================================
+   WORKSPACES
+========================================================= */
+
+#workspaces {
+    background: alpha(@color0, 0.85);
+
+    margin: 4px 6px;
+    padding: 0 6px;
+
+    border-radius: 14px;
+}
+
+#workspaces button {
+    background: transparent;
+
+    color: alpha(@foreground, 0.6);
+
+    margin: 4px 2px;
+    padding: 0 10px;
+
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: alpha(@color5, 0.20);
+
+    color: @color5;
+}
+
+#workspaces button.active {
+    background: @color4;
+
+    color: @background;
+
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background: @color1;
+
+    color: @background;
+}
+
+/* =========================================================
+   SHARED MODULE STYLE
+========================================================= */
+
+#clock,
+#cpu,
+#memory,
+#battery,
+#network,
+#pulseaudio,
+#tray,
+#custom-swaync,
+#window {
+    background: alpha(@color0, 0.85);
+
+    color: @foreground;
+
+    margin: 4px 4px;
+    padding: 0 14px;
+
+    border-radius: 14px;
+}
+
+/* =========================================================
+   WINDOW TITLE
+========================================================= */
+
+#window {
+    color: alpha(@foreground, 0.75);
+
+    font-style: italic;
+}
+
+/* =========================================================
+   CLOCK
+========================================================= */
+
+#clock {
+    background: @color4;
+
+    color: @background;
+
+    font-weight: bold;
+}
+
+/* =========================================================
+   CPU
+========================================================= */
+
+#cpu:hover {
+    background: alpha(@color2, 0.20);
+
+    color: @color2;
+}
+
+/* =========================================================
+   MEMORY
+========================================================= */
+
+#memory:hover {
+    background: alpha(@color3, 0.20);
+
+    color: @color3;
+}
+
+/* =========================================================
+   NETWORK
+========================================================= */
+
+#network:hover {
+    background: alpha(@color6, 0.20);
+
+    color: @color6;
+}
+
+#network.disconnected {
+    background: alpha(@color1, 0.20);
+
+    color: @color1;
+}
+
+/* =========================================================
+   PULSEAUDIO
+========================================================= */
+
+#pulseaudio:hover {
+    background: alpha(@color5, 0.20);
+
+    color: @color5;
+}
+
+#pulseaudio.muted {
+    background: alpha(@color8, 0.20);
+
+    color: @color8;
+}
+
+/* =========================================================
+   BATTERY
+========================================================= */
+
+#battery {
+    color: @foreground;
+}
+
+#battery.charging {
+    background: alpha(@color2, 0.20);
+
+    color: @color2;
+}
+
+#battery.warning {
+    background: alpha(@color3, 0.20);
+
+    color: @color3;
+}
+
+#battery.critical {
+    background: alpha(@color1, 0.25);
+
+    color: @color1;
+
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    to {
+        opacity: 0.4;
+    }
+}
+
+/* =========================================================
+   SWAYNC
+========================================================= */
+
+#custom-swaync:hover {
+    background: alpha(@color4, 0.20);
+
+    color: @color4;
+}
+
+/* =========================================================
+   SYSTEM TRAY
+========================================================= */
+
+#tray {
+    padding: 0 10px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    background: alpha(@color1, 0.20);
+}
+
+/* =========================================================
+   TOOLTIPS
+========================================================= */
+
+tooltip {
+    background: alpha(@background, 0.95);
+
+    color: @foreground;
+
+    border-radius: 14px;
+
+    border: 1px solid alpha(@color4, 0.35);
+}
+
+tooltip label {
+    color: @foreground;
+}
+
+/* =========================================================
+   GROUP HOVER EFFECT
+========================================================= */
+
+#clock:hover,
+#window:hover,
+#tray:hover {
+    background: alpha(@color4, 0.18);
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin-top: 2px;
+}

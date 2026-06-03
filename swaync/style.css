@@ -1,0 +1,205 @@
+/* ╔══════════════════════════════════════╗ */
+/* ║   swaync Style — Minimal & Clean     ║ */
+/* ╚══════════════════════════════════════╝ */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  border: none;
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+
+/* ── Notification Popup (toast) ──────────── */
+.notification-row {
+  outline: none;
+  margin: 6px 12px 0 0;
+}
+
+.notification-row:last-child {
+  margin-bottom: 6px;
+}
+
+.notification {
+  background: rgba(17, 17, 27, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-height: 0;
+}
+
+.notification-content {
+  padding: 0;
+}
+
+/* ── App Icon ────────────────────────────── */
+.notification-default-action {
+  padding: 0;
+  background: transparent;
+  border-radius: 10px;
+}
+
+.notification-default-action:hover {
+  background: rgba(137, 180, 250, 0.06);
+}
+
+image.notification-icon {
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+/* ── Title & Body ────────────────────────── */
+.notification-title {
+  color: #cdd6f4;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.notification-body {
+  color: #6c7086;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ── Close Button ────────────────────────── */
+.notification-action-area {
+  display: none; /* hide action buttons for minimal look */
+}
+
+.close-button {
+  background: transparent;
+  color: #45475a;
+  border-radius: 6px;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 2px;
+  font-size: 11px;
+}
+
+.close-button:hover {
+  background: rgba(243, 139, 168, 0.15);
+  color: #f38ba8;
+}
+
+/* ── Urgency Colors ──────────────────────── */
+.notification.critical {
+  border-color: rgba(243, 139, 168, 0.3);
+}
+
+.notification.critical .notification-title {
+  color: #f38ba8;
+}
+
+.notification.low {
+  opacity: 0.75;
+}
+
+/* ── Control Center Panel ────────────────── */
+.control-center {
+  background: rgba(17, 17, 27, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 8px;
+  margin-top: 8px;
+  margin-right: 12px;
+}
+
+/* ── Panel Title ─────────────────────────── */
+.widget-title {
+  color: #6c7086;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 8px 10px 8px;
+}
+
+.widget-title > button {
+  background: transparent;
+  color: #45475a;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 3px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.widget-title > button:hover {
+  background: rgba(243, 139, 168, 0.1);
+  color: #f38ba8;
+  border-color: rgba(243, 139, 168, 0.2);
+}
+
+/* ── DND Toggle ──────────────────────────── */
+.widget-dnd {
+  padding: 0 8px 10px 8px;
+}
+
+.widget-dnd > switch {
+  background: rgba(45, 45, 60, 0.8);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-height: 20px;
+  min-width: 40px;
+}
+
+.widget-dnd > switch:checked {
+  background: rgba(137, 180, 250, 0.3);
+  border-color: rgba(137, 180, 250, 0.4);
+}
+
+.widget-dnd > switch slider {
+  background: #45475a;
+  border-radius: 50%;
+  min-width: 14px;
+  min-height: 14px;
+  margin: 3px;
+}
+
+.widget-dnd > switch:checked slider {
+  background: #89b4fa;
+}
+
+.widget-dnd label {
+  color: #a6adc8;
+  font-size: 12px;
+}
+
+/* ── Notification List in Panel ──────────── */
+.notification-group {
+  padding: 0;
+}
+
+.notification-group-headers {
+  color: #45475a;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 4px 8px;
+}
+
+/* ── Empty State ─────────────────────────── */
+.notifications-group-empty-label {
+  color: #313244;
+  font-size: 12px;
+  padding: 40px 0;
+}
+
+/* ── Scrollbar ───────────────────────────── */
+scrollbar {
+  background: transparent;
+  min-width: 4px;
+}
+
+scrollbar slider {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  min-height: 30px;
+}
+
+scrollbar slider:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
