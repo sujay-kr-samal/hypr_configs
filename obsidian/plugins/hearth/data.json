@@ -1,0 +1,143 @@
+{
+  "title": "Obsidian",
+  "showTitle": true,
+  "logo": "👾",
+  "searchPlaceholder": "Search or command",
+  "showNewNoteButton": true,
+  "newNoteButtonMode": "newNote",
+  "searchContents": true,
+  "searchEngine": "builtin",
+  "backgroundKind": "none",
+  "backgroundValue": "",
+  "backgroundOpacity": 0.8,
+  "backgroundBlur": 2,
+  "openOnStartup": true,
+  "replaceNewTabs": true,
+  "mobileSearchOnly": false,
+  "showMobileActionBar": true,
+  "mobileActionButtons": [
+    {
+      "id": "action-new-note",
+      "label": "New note",
+      "icon": "plus",
+      "type": "command",
+      "target": "hearth:new-note"
+    },
+    {
+      "id": "action-new-drawing",
+      "label": "New drawing",
+      "icon": "pen-tool",
+      "type": "command",
+      "target": "hearth:new-drawing"
+    },
+    {
+      "id": "action-record-voice",
+      "label": "Record voice",
+      "icon": "mic",
+      "type": "command",
+      "target": "hearth:record-voice"
+    },
+    {
+      "id": "action-daily-note",
+      "label": "Daily note",
+      "icon": "calendar",
+      "type": "command",
+      "target": "hearth:open-daily-note"
+    }
+  ],
+  "disableExternalCalls": false,
+  "compact": false,
+  "arrangeButtonVisibility": "always",
+  "dashboardSwitcherVisibility": "always",
+  "cardOpacity": 0.5,
+  "cardBlur": 7,
+  "cardRadius": 14,
+  "hiddenFilters": [],
+  "dashboards": [
+    {
+      "id": "dash-mrqjhc2x-8657",
+      "name": "Dashboard 1",
+      "cards": [
+        {
+          "id": "card-clock",
+          "kind": "clock",
+          "title": "",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 3,
+          "fx": 0,
+          "fw": 0.20308310991957104,
+          "fy": 0,
+          "fh": 133
+        },
+        {
+          "id": "card-calendar",
+          "kind": "calendar",
+          "title": "",
+          "x": 7,
+          "y": 3,
+          "w": 5,
+          "h": 6,
+          "fx": 0,
+          "fw": 0.20241286863270777,
+          "fy": 149,
+          "fh": 251
+        },
+        {
+          "id": "card-stats",
+          "kind": "stats",
+          "title": "",
+          "x": 7,
+          "y": 9,
+          "w": 5,
+          "h": 4,
+          "fx": 0.21644295302013422,
+          "fw": 0.47567114093959734,
+          "fy": 0,
+          "fh": 169
+        },
+        {
+          "id": "card-mrqjqfyb-1996",
+          "x": 0,
+          "y": 1,
+          "kind": "heatmap",
+          "title": "",
+          "heatmap": {},
+          "w": 6,
+          "h": 3,
+          "fx": 0.2156040268456376,
+          "fy": 185,
+          "fw": 0.47651006711409394,
+          "fh": 215
+        },
+        {
+          "id": "card-mrqjrpz4-8677",
+          "x": 8,
+          "y": 0,
+          "kind": "recent",
+          "title": "",
+          "count": 8,
+          "w": 4,
+          "h": 3,
+          "fx": 0.7055369127516778,
+          "fy": 0,
+          "fw": 0.29446308724832215,
+          "fh": 400
+        }
+      ]
+    }
+  ],
+  "activeDashboardId": "dash-mrqjhc2x-8657",
+  "pinnedCards": [],
+  "gridColumns": 12,
+  "rowHeight": 92,
+  "favorites": [],
+  "fitToPage": true,
+  "taskNotesStatusField": "status",
+  "taskNotesDueField": "due",
+  "taskNotesPriorityField": "priority",
+  "taskNotesDoneValue": "done",
+  "maxWidth": 1600,
+  "lastSeenVersion": "1.12.0"
+}
